@@ -47,7 +47,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__copy">
-                2024 © Ломбард
+                <?=date('Y')?> © Ломбард
             </div>
         </div>
     </footer>
