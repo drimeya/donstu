@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap-grid.min.css">
     <!-- кастомные стили -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <?php session_start();?>
 </head>
 <body>
     <header class="header">

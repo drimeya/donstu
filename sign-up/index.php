@@ -1,4 +1,4 @@
-<?php require($_SERVER['DOCUMENT_ROOT'].'/layout/header.php')?>
+<?php require($_SERVER['DOCUMENT_ROOT'].'/layout/header.php');?>
 <h1>Регистрация</h1>
 <p>Зарегистрируйтесь для участия в бонусной программе</p>
 <form class="form">

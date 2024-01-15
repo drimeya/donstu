@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            let response = await fetch('/sign-in/', {
+            let response = await fetch('/account/', {
                 method: 'POST',
                 body: formdata
             });
             if (response.ok) {
-                window.location.href="/sign-in/"
+                window.location.href="/account/"
             } else {
                 console.log(response.ok);
             }
