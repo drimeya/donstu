@@ -47,30 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //form 
+    //форма 
     const forms = document.querySelectorAll('.form');
     forms.forEach(form => {
         form.addEventListener('submit', async e => {
             e.preventDefault();
-            const formdata = new FormData(form);
-            const resultElem = document.querySelector('.form__result'),
-            result = document.getElementById('form-res');
+            const formdata = new FormData(form),
+            headers = document.querySelectorAll('[data-for]');
+            if (headers) {
+                headers.forEach(header => {
+                    formdata.append(header.getAttribute('data-for') + '-header', header.textContent);
+                });
+            }
 
-            if (resultElem && result) {
-                resultElem.classList.add('active');
-                form.style.display = 'none';
-
-                let text = result.innerHTML;
-                for (const key of formdata.keys()) {
-                    let idElem = document.querySelector('[data-for='+key+']');
-                    if (!idElem) {
-                        idElem = document.querySelector('[data-for-service]');
-                    }
-                    if (idElem) {
-                        text += '<h3>' + idElem.innerHTML + '</h3>' + formdata.get(key) + '<br>';
-                    }
-                }
-                result.innerHTML = text;
+            let response = await fetch('/sign-in/', {
+                method: 'POST',
+                body: formdata
+            });
+            if (response.ok) {
+                window.location.href="/sign-in/"
+            } else {
+                console.log(response.ok);
             }
         });
     });

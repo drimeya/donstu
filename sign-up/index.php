@@ -35,18 +35,18 @@
         </fieldset>
     </div>
     <div class="form__group">
-        <h3 data-for-service class="form__group__title">Какими нашими услугами вы пользуетесь?</h3>
+        <h3 data-for='service' class="form__group__title">Какими нашими услугами вы пользуетесь?</h3>
         <fieldset>
             <div class="item">
-                <input type="checkbox" name="zalog" id="zalog" value="Деньги под залог">
+                <input type="checkbox" name="service-0" id="zalog" value="Деньги под залог">
                 <label for="zalog">Деньги под залог</label>
             </div>
             <div class="item">
-                <input type="checkbox" name="sale" id="sale" value="Продажа">
+                <input type="checkbox" name="service-1" id="sale" value="Продажа">
                 <label for="sale">Продажа</label>
             </div>
             <div class="item">
-                <input type="checkbox" name="buy" id="buy" value="Покупка">
+                <input type="checkbox" name="service-2" id="buy" value="Покупка">
                 <label for="buy">Покупка</label>
             </div>
         </fieldset>
